@@ -3,9 +3,8 @@
 // convenience to get you started writing code faster.
 //
 
-export const colorCode = color => {
-  return COLORS.findIndex(element => element == color);
-};
+export const colorCode = color => COLORS.indexOf(color);
+// return COLORS.findIndex(element => element == color);
 
 export const COLORS = [
   "black",
