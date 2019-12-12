@@ -63,3 +63,43 @@ export const translate = RNA => {
 
   return proteins;
 };
+
+// export const translate = (rnaString) => {
+//   const encoding = {
+//     AUG: 'Methionine',
+//     UUU: 'Phenylalanine',
+//     UUC: 'Phenylalanine',
+//     UUA: 'Leucine',
+//     UUG: 'Leucine',
+//     UCU: 'Serine',
+//     UCC: 'Serine',
+//     UCA: 'Serine',
+//     UCG: 'Serine',
+//     UAU: 'Tyrosine',
+//     UAC: 'Tyrosine',
+//     UGU: 'Cysteine',
+//     UGC: 'Cysteine',
+//     UGG: 'Tryptophan',
+//     UAA: 'STOP',
+//     UAG: 'STOP',
+//     UGA: 'STOP'
+//   };
+//   let proteinResult = [];
+//   if (rnaString) {
+//     let temp = '';
+//     for (let i=1; i < rnaString.length + 1; i++) {
+//       temp = temp += rnaString[i-1];
+//       if (i % 3 === 0) {
+//         if (encoding[temp] === 'STOP') {
+//           break;
+//         }
+//         if (encoding[temp] === undefined) {
+//           throw(new Error('Invalid codon'));
+//         }
+//         proteinResult.push(encoding[temp]);
+//         temp = '';
+//       }
+//     }
+//   }
+//   return proteinResult;
+// };
