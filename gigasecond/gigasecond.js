@@ -3,6 +3,5 @@
 // convenience to get you started writing code faster.
 //
 
-export const gigasecond = (date) => {
-  return new Date(Date.parse(date) + (1000000000 * 1000))
-};
+export const gigasecond = date =>
+  new Date(date.getTime() + 1000000000 * 1000);
