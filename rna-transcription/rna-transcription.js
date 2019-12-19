@@ -4,25 +4,9 @@
 //
 
 export const toRna = strand => {
-  const giveRnaStrand = letter => {
-    switch (letter) {
-      case "G":
-        return "C";
-      case "C":
-        return "G";
-      case "T":
-        return "A";
-      case "A":
-        return "U";
-      default:
-        return "";
-    }
-  };
+  const rna = { C: "G", G: "C", A: "U", T: "A" };
 
   if (!strand.length) return "";
 
-  return strand
-    .split("")
-    .map(letter => giveRnaStrand(letter))
-    .join("");
+  return [...strand].map(letter => rna[letter]).join("");
 };
